@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(
+            90deg,
+            lightblue,
+            lightgreen,
+            rgba(255, 208, 0, 0.748)
+          )
+          fixed;
+        padding: 50px;
+      }
+      .mainn {
+        height: 90vh;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .it {
+        height: 300px;
+        width: 250px;
+        position: relative;
+        background: bisque;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        padding: 20px;
+        transition: all 0.3s ease-in;
+        /* overflow: scroll; */
+      }
+      .it > * {
+        padding: 10px;
+      }
+      .it .ci {
+        height: 150px;
+        width: 150px;
+        border: 5px double #022a3c;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+      }
+      .it .ct {
+        padding: 20px 10px;
+        font-size: 1.5rem;
+        text-shadow: 1px 0px 2px #262654;
+      }
+      /* .it:nth-child(1) .ci{
+        background-image: url(Thar.avif);
+      }
+      .it:nth-child(2) .ci{
+        background-image: url(Jeep.avif);
+      }
+      .it:nth-child(3) .ci{
+        background-image: url(jimny.avif);
+      } */
+      .it:hover {
+        background: #2c22273b;
+        box-shadow: 0px 0px 11px 5px #000000;
+      }
+      .it .cx {
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div><center><button style="background-color: rgba(240, 248, 255, 0); border: 0px; text-shadow:  0px 0px 12px #000000; font-size: larger;" onclick="cloWin()">---To close the pop-up Click Me &#9995;(click here only after clicking on output)---</button></center></div>
+    <br>
+    <div class="mainn">
+      <div class="it">
+        <!-- <div class="ci "></div> -->
+        <div class="ct">Question-1</div>
+        <div class="cx">
+          <div>Input :</div>
+          <div>var m5 = [3,5,10,15,23,22,25,35,56,100];</div>
+          <div>Expected o/p: 5,10,15,25,35,100</div>
+          <br>
+          <div>
+            <center><button style="background-color: rgba(240, 248, 255, 0); border: 0px; text-shadow:  1px 1px 8px #000000;" onclick="openWin()">---Click me for Output &#9995;---</button></center>
+          </div>
+        </div>
+      </div>
+      <div class="it">
+        <!-- <div class="ci "></div> -->
+        <div class="ct">Question-2</div>
+        <div class="cx">
+          <div>Input :</div>
+          <div>var arr=["html","csS","javaScrIPT", "react", "angulaR", "nodE", "EXPRESS"]</div>
+          
+          <div>Expected o/p: "html", "csS","javaScrIPT", "angular", "nodE"</div>
+          <br>
+          <div>
+            <center><button style="background-color: rgba(240, 248, 255, 0); border: 0px; text-shadow:  1px 1px 8px #000000;" onclick="closeWin()">---Click me for Output &#9995;---</button></center>
+          </div>
+        </div>
+      </div>
+      <div class="it">
+        <!-- <div class="ci "></div> -->
+        <div class="ct">Question-3</div>
+        <div class="cx">
+          <div>Input :</div>
+          <div>var arr=["html", "css","js", "react", "angular"]; </div>
+          <div>Expected o/p:["HTML","JS","ANGULAR";</div>
+          <br>
+          <div>
+            <center><button style="background-color: rgba(240, 248, 255, 0); border: 0px; text-shadow:  1px 1px 8px #000000;" onclick="closWin()">---Click me for Output &#9995;---</button></center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let myWindow;
+
+      function openWin() {
+        myWindow = window.open(
+          "https://shathamanyu.github.io/op1/",
+          "_blank",
+          "width=200,height=100"
+        );
+      }
+      function closeWin() {
+        myWindow.close();
+        myWindo = window.open(
+          "https://shathamanyu.github.io/op2/",
+          "_blank",
+          "width=300,height=300"
+        );
+      }
+
+      function closWin() {
+        myWindo.close();
+        myWind = window.open(
+          "https://shathamanyu.github.io/op3/",
+          "_blank",
+          "width=400,height=400"
+        );
+      }
+      function cloWin() {
+        myWindow.close();
+        myWindo.close();
+        myWind.close();
+      }
+    </script>
+  </body>
+</html>
